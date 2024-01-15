@@ -1,0 +1,45 @@
+<!-- DEEP BISWAS -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trying out the SVG animations with a simple music player">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>SVG Music Player</title>
+        <script defer src="./js/script.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <video autoplay muted loop>
+                <source src="./video/background-soft-gradient.mp4" type="video/mp4">
+            </video>
+            <div class="main-c">
+                <svg id="svgContainer" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" fill="none"/>
+                    <g id="Frame1">
+                        <rect width="100" height="100" fill="none"/>
+                        <circle id="circle" cx="50" cy="50" r="40" fill="#F8C84F"/>
+                        <path id="play" d="M70.2796 47.8775C72.337 49.0206 72.337 51.9794 70.2796 53.1225L39.7069 70.1075C37.7074 71.2184 35.25 69.7725 35.25 67.4851L35.25 33.5149C35.25 31.2275 37.7074 29.7816 39.7069 30.8925L70.2796 47.8775Z" fill="#0B0979"/>
+                        <g id="pause" style="opacity: 0;">
+                            <rect id="Rectangle1" x="34" y="30" width="12" height="41" rx="3" fill="#0B0979"/>
+                            <rect id="Rectangle2" x="53" y="30" width="12" height="41" rx="3" fill="#0B0979"/>
+                        </g>
+                    </g>
+                </svg>
+                <div id="songName"></div>
+                <span id="countdown">0:00</span>
+                <svg id="playHead" width="500" height="100" viewBox="0 0 500 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="500" height="100" fill="none"/>
+                    <g id="Frame 1">
+                        <rect width="500" height="100" fill="red" style="opacity: 0;"/>
+                        <rect id="playTime" x="21" y="48" width="459" height="5" rx="1" fill="#0B0979"/>
+                        <circle id="playBall" cx="21" cy="50" r="5" fill="#F8C84F"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </body>
+</html>
